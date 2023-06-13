@@ -1,0 +1,39 @@
+:root {
+  --black-color: rgb(33, 37, 41);
+  --yellow-color: rgb(245, 223, 78);
+  --white-color: rgb(250, 250, 250);
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-family: var(--font-family);
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* @media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}
+ */

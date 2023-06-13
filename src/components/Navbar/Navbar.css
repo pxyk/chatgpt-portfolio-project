@@ -1,0 +1,115 @@
+:root {
+  --black-color: rgb(33, 37, 41);
+  --yellow-color: rgb(245, 223, 78);
+  --white-color: rgb(250, 250, 250);
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  font-family: var(--font-family);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: rgb(33, 37, 41);
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  z-index: 1; /* Burada Navbar'ın z-index değerini 1 olarak ayarlıyoruz */
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.navbar__logo {
+  font-size: 24px;
+  font-weight: 800;
+  text-decoration: none;
+  color: var(--yellow-color);
+  display: inline-block;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 1; /* Burada Navbar'ın z-index değerini 1 olarak ayarlıyoruz */
+}
+
+.navbar__logo:hover {
+  opacity: 0.8;
+}
+
+.navbar__logo::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--yellow-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar__logo:hover::after {
+  width: 100%;
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.navbar__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar__menu li {
+  margin: 0 10px;
+}
+
+.navbar__menu li a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar__menu li a:hover {
+  color: var(--yellow-color);
+  transform: scale(1.1);
+}
+
+
+/* @media only screen and (max-width: 768px) {
+  .navbar__right {
+    display: none;
+  }
+} */
